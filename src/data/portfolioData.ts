@@ -52,9 +52,9 @@ export const portfolioData: PortfolioData = {
       id: 'siempregym',
       title: 'SIEMPREGYM',
       images: [
-        '/public/projects/siempregym1.png',
-        '/public/projects/siempregym2.png',
-        '/public/projects/siempregym3.png'
+        '/projects/siempregym1.png',
+        '/projects/siempregym2.png',
+        '/projects/siempregym3.png'
       ],
       description: 'Una aplicación de gestión de turnos de un gimnasio.',
       longDescription: 'SiempreGym es una aplicación de gestión construida con React y NodeJs que permite la gestión de turnos, ingresos y perfiles. Proporciona la inscripción y cancelación de turnos por parte del cliente y un panel de administración para adminitradores y empleados con una interfaz amigable y responsiva. Trabajo integrador realizado en grupo bajo el marco de la materia "Ingeniería de Software 2"',
@@ -66,8 +66,8 @@ export const portfolioData: PortfolioData = {
       id: 'nlp',
       title: 'WIKI NLP',
       images: [
-        '/public/projects/wiki-nlp1.png',
-        '/public/projects/wiki-nlp2.png'
+        '/projects/wiki-nlp1.png',
+        '/projects/wiki-nlp2.png'
       ],
       description: 'Página estática con información de cada servicio desarrollado.',
       longDescription: 'Wiki donde muestra la información de cada servicio desarrollado dentro del proyecto de investigación "Uso de NLP, AI y LLMs a Textos Semiestructurados" dentro del centro LIFIA (Laboratorio de Investigación y Formación en Informática Avanzada).',
@@ -79,9 +79,9 @@ export const portfolioData: PortfolioData = {
       id: 'datahogar.ar',
       title: 'DATAHOGAR.AR',
       images: [
-        '/public/projects/datahogar1.png',
-        '/public/projects/datahogar2.png',
-        '/public/projects/datahogar3.png'
+        '/projects/datahogar1.png',
+        '/projects/datahogar2.png',
+        '/projects/datahogar3.png'
       ],
       description: 'Sistema de visualización y analisis de datos.',
       longDescription: 'Este proyecto utiliza Streamlit para visualizar y analizar datos provenientes de encuestas de hogares e individuos. El objetivo es explorar distintos indicadores sociales y económicos a través de una interfaz visual. Trabajo integrador realizado en grupo en el marco de la materia "Seminario de Lenguajes - Python"',
