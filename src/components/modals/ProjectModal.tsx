@@ -82,7 +82,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
                   rel="noopener noreferrer"
                   className="px-4 py-2 font-mono text-xs font-bold uppercase border-2 border-black bg-neo-purple text-white shadow-neo neo-btn inline-flex items-center gap-2"
                 >
-                  <span>Ver Demo En Vivo</span>
+                  <span>Link a la página</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               )}
