@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Cuadrícula técnica sutil para el fondo del hero */
+  .bg-grid-pattern {
+    background-color: #ffffff;
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+    background-size: 26px 26px;
+  }
+
+  /* Cuadrícula técnica para el banner púrpura */
+  .bg-purple-grid {
+    background-color: #735BF2;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Estilos neo-brutalistas reutilizables */
+  .neo-box {
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
+
+  .neo-box-thick {
+    border: 3px solid #000000;
+    box-shadow: 5px 5px 0px 0px #000000;
+  }
+
+  .neo-box-sm {
+    border: 2px solid #000000;
+    box-shadow: 2px 2px 0px 0px #000000;
+  }
+
+  .neo-btn {
+    border: 2px solid #000000;
+    box-shadow: 3px 3px 0px 0px #000000;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .neo-btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
+
+  .neo-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px 0px #000000;
+  }
+}
+
+/* Scrollbar con bordes rectos estilo neo-brutalist */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-left: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4F135;
+  border: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF708F;
+}
