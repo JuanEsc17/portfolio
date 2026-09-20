@@ -3,6 +3,7 @@ import { X, ExternalLink, Sparkles } from 'lucide-react';
 import { ProjectImageCarousel } from '../ProjectImageCarousel';
 import { GithubIcon } from '../SocialIcons';
 import { Project } from '../../types/portfolio';
+import { sanitizeUrl } from '../../utils/security';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -77,7 +78,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
             <div className="flex items-center gap-3">
               {project.liveUrl && (
                 <a
-                  href={project.liveUrl}
+                  href={sanitizeUrl(project.liveUrl)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 font-mono text-xs font-bold uppercase border-2 border-black bg-neo-purple text-white shadow-neo neo-btn inline-flex items-center gap-2"
@@ -88,7 +89,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onC
               )}
               {project.githubUrl && (
                 <a
-                  href={project.githubUrl}
+                  href={sanitizeUrl(project.githubUrl)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 font-mono text-xs font-bold uppercase border-2 border-black bg-white shadow-neo neo-btn inline-flex items-center gap-2"

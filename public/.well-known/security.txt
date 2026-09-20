@@ -1,0 +1,8 @@
+# Security Policy - RFC 9116
+# Política de divulgación responsable de vulnerabilidades
+
+Contact: mailto:juanescudero074@gmail.com
+Preferred-Languages: es, en
+Expires: 2027-12-31T23:59:59.000Z
+Policy: https://github.com/JuanEsc17/portfolio
+Acknowledgments: https://github.com/JuanEsc17/portfolio

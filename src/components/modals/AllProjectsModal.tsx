@@ -3,6 +3,7 @@ import { X, ExternalLink, ArrowRight, FolderGit2 } from 'lucide-react';
 import { GithubIcon } from '../SocialIcons';
 import { portfolioData } from '../../data/portfolioData';
 import { Project } from '../../types/portfolio';
+import { sanitizeUrl } from '../../utils/security';
 
 interface AllProjectsModalProps {
   isOpen: boolean;
@@ -107,7 +108,7 @@ export const AllProjectsModal: React.FC<AllProjectsModalProps> = ({
                     <div className="flex items-center gap-2">
                       {project.githubUrl && (
                         <a
-                          href={project.githubUrl}
+                          href={sanitizeUrl(project.githubUrl)}
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Ver código en GitHub"
@@ -118,7 +119,7 @@ export const AllProjectsModal: React.FC<AllProjectsModalProps> = ({
                       )}
                       {project.liveUrl && (
                         <a
-                          href={project.liveUrl}
+                          href={sanitizeUrl(project.liveUrl)}
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Ver demo en vivo"
@@ -141,7 +142,7 @@ export const AllProjectsModal: React.FC<AllProjectsModalProps> = ({
               <p className="font-mono text-xs text-purple-200">Visita mi perfil de GitHub con todos mis repositorios.</p>
             </div>
             <a
-              href={`${githubLink}?tab=repositories`}
+              href={sanitizeUrl(`${githubLink}?tab=repositories`)}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-black font-mono font-bold text-xs uppercase px-4 py-2 border-2 border-black shadow-neo-sm neo-btn inline-flex items-center gap-2 shrink-0"

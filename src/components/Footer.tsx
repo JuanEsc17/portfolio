@@ -1,5 +1,6 @@
 import { GithubIcon, LinkedinIcon, TwitterIcon, MailIcon } from './SocialIcons';
 import { portfolioData } from '../data/portfolioData';
+import { sanitizeUrl } from '../utils/security';
 
 interface FooterProps {
   onOpenContact: () => void;
@@ -37,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
         {portfolioData.socials.map((social) => (
           <a
             key={social.platform}
-            href={social.platform === 'email' ? '#contacto' : social.url}
+            href={social.platform === 'email' ? '#contacto' : sanitizeUrl(social.url)}
             onClick={social.platform === 'email' ? (e) => { e.preventDefault(); onOpenContact(); } : undefined}
             target={social.platform === 'email' ? undefined : "_blank"}
             rel="noopener noreferrer"

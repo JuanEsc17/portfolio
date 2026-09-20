@@ -35,7 +35,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       platform: 'email',
-      url: 'mailto:juanescudero328@gmail.com',
+      url: '',
       label: 'Email'
     }
   ],
@@ -96,7 +96,8 @@ export const portfolioData: PortfolioData = {
       title: 'Desarrollo Full Stack',
       issuer: 'Streambe',
       date: '2022',
-      description: 'Bootcamp enfocado en el desarrollo web con tecnologías como: Javascript, HTML y CSS.'
+      description: 'Bootcamp enfocado en el desarrollo web con tecnologías como: Javascript, HTML y CSS.',
+      credentialUrl: 'https://drive.google.com/file/d/1nMuSQM8Frxll_-RvE5ABCjw9VrkydHc5/view?usp=sharing'
     },
     {
       id: 'cert-2',
@@ -113,14 +114,14 @@ export const portfolioData: PortfolioData = {
       role: 'ESTUDIANTE INVESTIGADOR',
       company: 'LIFIA.',
       period: 'MARZO 2025 - PRESENTE',
-      description: 'Colaboración en proyecto de investigación de NLP desarrollando y evaluando modelos de inferencia textual y clasificación semántica.',
+      description: 'Colaboración en proyecto de investigación de NLP desarrollando y evaluando modelos de lenguaje y clasificación semántica.',
       technologies: ['Python', 'spaCy', 'Hugging Face Transformers']
     },
     {
       id: 'exp-2',
       role: 'DESARROLLADOR WEB FREELANCE',
       period: '2025 - PRESENTE',
-      description: 'Construyo sitios web interactivos de marketing y herramientas internas optimizadas para diversos clientes de alto perfil.',
+      description: 'Construyo sitios web interactivos y herramientas internas optimizadas para diversos clientes.',
       technologies: ['JavaScript', 'React', 'CSS3', 'Node.js']
     }
   ],

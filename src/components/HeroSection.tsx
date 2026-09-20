@@ -1,6 +1,7 @@
 import { ArrowUpRight, ArrowDown } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, TwitterIcon, MailIcon } from './SocialIcons';
 import { portfolioData } from '../data/portfolioData';
+import { sanitizeUrl } from '../utils/security';
 
 interface HeroSectionProps {
   onOpenResume?: () => void;
@@ -71,7 +72,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             {portfolioData.socials.map((social) => (
               <a
                 key={social.platform}
-                href={social.platform === 'email' ? '#contacto' : social.url}
+                href={social.platform === 'email' ? '#contacto' : sanitizeUrl(social.url)}
                 onClick={social.platform === 'email' ? (e) => { e.preventDefault(); onOpenContact(); } : undefined}
                 target={social.platform === 'email' ? undefined : "_blank"}
                 rel="noopener noreferrer"

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
+import { sanitizeUrl } from '../utils/security';
 
 interface ExperienceSectionProps {
   onOpenResume?: () => void;
@@ -50,7 +51,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = () => {
         {/* Botón Ver CV Completo */}
         <div className="mt-8 pt-4">
           <a
-            href={portfolioData.resumeUrl || '/cv.pdf'}
+            href={sanitizeUrl(portfolioData.resumeUrl || '/cv.pdf')}
             target="_blank"
             rel="noopener noreferrer"
             download="CV-Juan-Escudero.pdf"

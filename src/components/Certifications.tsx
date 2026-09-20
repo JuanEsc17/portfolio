@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Award } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { Certification } from '../types/portfolio';
+import { sanitizeUrl } from '../utils/security';
 
 export const Certifications: React.FC = () => {
   const [activeCert, setActiveCert] = useState<Certification | null>(null);
@@ -43,7 +44,7 @@ export const Certifications: React.FC = () => {
       {/* Botón Ver Todas las Certificaciones */}
       <div className="mt-6 pt-2">
         <a
-          href="https://linkedin.com"
+          href={sanitizeUrl(portfolioData.socials.find((s) => s.platform === 'linkedin')?.url || 'https://www.linkedin.com')}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full bg-white border-2 border-black shadow-neo-sm px-4 py-3 font-mono text-xs font-bold uppercase text-black neo-btn flex items-center justify-center gap-2 text-center"
@@ -56,9 +57,21 @@ export const Certifications: React.FC = () => {
       {/* Modal / Toast con información del certificado seleccionado */}
       {activeCert && (
         <div className="mt-4 p-3 bg-white border-2 border-black shadow-neo-sm font-mono text-xs animate-in fade-in">
-          <div className="flex items-center gap-1.5 font-bold uppercase text-neo-purple mb-1">
-            <Award className="w-3.5 h-3.5" />
-            <span>{activeCert.title}</span>
+          <div className="flex items-center justify-between gap-2 mb-1">
+            <div className="flex items-center gap-1.5 font-bold uppercase text-neo-purple">
+              <Award className="w-3.5 h-3.5 shrink-0" />
+              <span>{activeCert.title}</span>
+            </div>
+            {activeCert.credentialUrl && (
+              <a
+                href={sanitizeUrl(activeCert.credentialUrl)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] font-bold uppercase underline hover:text-black shrink-0"
+              >
+                Credencial ↗
+              </a>
+            )}
           </div>
           <p className="text-gray-700">{activeCert.description}</p>
         </div>

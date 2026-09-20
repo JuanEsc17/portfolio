@@ -1,0 +1,8 @@
+# robots.txt para el portfolio de Juan Escudero
+User-agent: *
+Allow: /
+
+# Bloquear indexación de archivos de metadatos internos o configuración
+Disallow: /_headers
+Disallow: /.well-known/
+Disallow: /*.json$
