@@ -116,13 +116,6 @@ export const portfolioData: PortfolioData = {
       period: 'MARZO 2025 - PRESENTE',
       description: 'Colaboración en proyecto de investigación de NLP desarrollando y evaluando modelos de lenguaje y clasificación semántica.',
       technologies: ['Python', 'spaCy', 'Hugging Face Transformers']
-    },
-    {
-      id: 'exp-2',
-      role: 'DESARROLLADOR WEB FREELANCE',
-      period: '2025 - PRESENTE',
-      description: 'Construyo sitios web interactivos y herramientas internas optimizadas para diversos clientes.',
-      technologies: ['JavaScript', 'React', 'CSS3', 'Node.js']
     }
   ],
   cta: {
